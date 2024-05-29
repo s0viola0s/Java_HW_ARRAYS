@@ -26,16 +26,16 @@ public class StatsService {
                 maxMonth = i;
             }
         }
-        maxMonth ++;
+        maxMonth++;
         return maxMonth;
     }
 
     // номер последнего месяца, в котором был минимум продаж (продажи на минимальную сумму);
-    public int calcMinSalesMonth(int[] salesStat){
+    public int calcMinSalesMonth(int[] salesStat) {
         int minMonth = 0;
 
-        for(int i=0; i<salesStat.length; i++){
-            if (salesStat[i]<=salesStat[minMonth]){
+        for (int i = 0; i < salesStat.length; i++) {
+            if (salesStat[i] <= salesStat[minMonth]) {
                 minMonth = i;
             }
         }
@@ -44,11 +44,11 @@ public class StatsService {
     }
 
     // количество месяцев, в которых продажи были ниже среднего
-    public int calcBelowAverage(int[] salesStat){
-        int count =0;
+    public int calcBelowAverage(int[] salesStat) {
+        int count = 0;
         int average = calcAverageAmountSales(salesStat);
-        for (int i=0; i<salesStat.length; i++){
-            if (salesStat[i]<average){
+        for (int i = 0; i < salesStat.length; i++) {
+            if (salesStat[i] < average) {
                 count++;
             }
         }
@@ -56,11 +56,11 @@ public class StatsService {
     }
 
     // количество месяцев, в которых продажи были выше среднего
-    public int calcAboveAverage(int [] salesStat){
-        int count =0;
+    public int calcAboveAverage(int[] salesStat) {
+        int count = 0;
         int average = calcAverageAmountSales(salesStat);
-        for (int i=0; i<salesStat.length; i++){
-            if (salesStat[i]>average){
+        for (int i = 0; i < salesStat.length; i++) {
+            if (salesStat[i] > average) {
                 count++;
             }
         }
