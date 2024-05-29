@@ -9,7 +9,7 @@ public class StatsServiceTest {
     public void shouldCalcAmountSales() {
         StatsService service = new StatsService();
 
-        int[] salesStat = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] salesStat = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedAmount = 180;
         int actualAmount = service.calcAmountSales(salesStat);
@@ -21,7 +21,7 @@ public class StatsServiceTest {
     public void shouldCalcAverageAmountSales() {
         StatsService service = new StatsService();
 
-        int[] salesStat = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] salesStat = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedAverage = 15;
         int actualAmount = service.calcAverageAmountSales(salesStat);
 
@@ -32,7 +32,7 @@ public class StatsServiceTest {
     public void shouldCalcMaxSalesMonth() {
         StatsService service = new StatsService();
 
-        int[] salesStat = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] salesStat = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedMonth = 8;
         int actualMonth = service.calcMaxSalesMonth(salesStat);
 
@@ -43,7 +43,7 @@ public class StatsServiceTest {
     public void shouldCalcMinSalesMonth() {
         StatsService service = new StatsService();
 
-        int[] salesStat = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] salesStat = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedMonth = 9;
         int actualMonth = service.calcMinSalesMonth(salesStat);
 
@@ -54,7 +54,7 @@ public class StatsServiceTest {
     public void shouldCalcBelowAverageMonth() {
         StatsService service = new StatsService();
 
-        int[] salesStat = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] salesStat = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
         int actual = service.calcBelowAverage(salesStat);
 
@@ -65,7 +65,7 @@ public class StatsServiceTest {
     public void shouldCalcAboveAverageMonth() {
         StatsService service = new StatsService();
 
-        int[] salesStat = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] salesStat = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
         int actual = service.calcAboveAverage(salesStat);
 

@@ -3,7 +3,7 @@ package ru.netology.stats;
 public class StatsService {
 
     // сумма всех продаж
-    public int calcAmountSales(int[] salesStat) {
+    public int calcAmountSales(long[] salesStat) {
         int amount = 0;
         for (int i = 0; i < salesStat.length; i++) {
             amount += salesStat[i];
@@ -12,13 +12,13 @@ public class StatsService {
     }
 
     // средняя сумма продаж в месяц
-    public int calcAverageAmountSales(int[] salesStat) {
+    public int calcAverageAmountSales(long[] salesStat) {
         int averageAmount = calcAmountSales(salesStat) / salesStat.length;
         return averageAmount;
     }
 
     // номер последнего месяца, в котором был пик продаж (продажи на максимальную сумму);
-    public int calcMaxSalesMonth(int[] salesStat) {
+    public int calcMaxSalesMonth(long[] salesStat) {
         int maxMonth = 0;
 
         for (int i = 0; i < salesStat.length; i++) {
@@ -31,7 +31,7 @@ public class StatsService {
     }
 
     // номер последнего месяца, в котором был минимум продаж (продажи на минимальную сумму);
-    public int calcMinSalesMonth(int[] salesStat) {
+    public int calcMinSalesMonth(long[] salesStat) {
         int minMonth = 0;
 
         for (int i = 0; i < salesStat.length; i++) {
@@ -44,7 +44,7 @@ public class StatsService {
     }
 
     // количество месяцев, в которых продажи были ниже среднего
-    public int calcBelowAverage(int[] salesStat) {
+    public int calcBelowAverage(long[] salesStat) {
         int count = 0;
         int average = calcAverageAmountSales(salesStat);
         for (int i = 0; i < salesStat.length; i++) {
@@ -56,7 +56,7 @@ public class StatsService {
     }
 
     // количество месяцев, в которых продажи были выше среднего
-    public int calcAboveAverage(int[] salesStat) {
+    public int calcAboveAverage(long[] salesStat) {
         int count = 0;
         int average = calcAverageAmountSales(salesStat);
         for (int i = 0; i < salesStat.length; i++) {
